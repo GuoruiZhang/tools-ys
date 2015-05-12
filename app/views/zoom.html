@@ -1,0 +1,20 @@
+<form class="form" role="form">
+	<div class="form-group">
+		<label class="label-control">缩放模式：</label>
+		<select ng-model="command.zoom.pattern">
+			<option value="m1">宽高均不大于目标值</option>
+			<option value="m2">强制按指定的宽高缩略</option>
+			<option value="m3">指定宽度，高度自适应</option>
+			<option value="m4">指定高度，宽度自适应</option>
+			<option value="m5">宽高按比例缩放</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="label-control">宽度：</label>
+		<input type="text" name="width" ng-model="command.zoom.width">.像素/百分比
+	</div>
+	<div class="form-group">
+		<label class="label-control">高度：</label>
+		<input type="text" name="width" ng-model="command.zoom.height">.像素/百分比
+	</div>
+</form>

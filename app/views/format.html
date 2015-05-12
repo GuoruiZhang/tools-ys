@@ -1,0 +1,19 @@
+<form class="form" role="form">
+	<div class="form-group">
+		<label class="label-control">质量：</label>
+		<input type="text" name="width" ng-model="command.format.quality">
+	</div>
+	<div class="form-group">
+		<label class="label-control">格式：</label>
+		<select ng-model="command.format.type">
+			<option value="jpg">jpeg/jpg</option>
+			<option value="bmp">bmp</option>
+			<option value="png">png</option>
+			<option value="gif">gif</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="label-control">是否渐进展示：</label>
+		<input type="checkbox" ng-model="command.format.stepBystep">
+	</div>
+</form>

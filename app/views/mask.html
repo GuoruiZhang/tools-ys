@@ -1,0 +1,53 @@
+<form class="form" role="form">
+	<div class="form-group">
+		<label class="label-control">水印文字：</label>
+		<textarea cols="100" rows="3" ng-model="command.mask.text"></textarea>
+	</div>
+	<div class="form-group">
+		<label class="label-control">图片水印：</label>
+		<input type="text" name="width" ng-model="command.mask.img"> (同一个容器中的相对URL)
+	</div>
+	<div class="form-group">
+		<label class="label-control">字体：</label>
+		<select ng-model="command.mask.font">
+			<option value="arial">微软Arial</option>
+			<option value="simsong">宋体</option>
+			<option value="simhei">黑体</option>
+			<option value="simkai">楷体</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="label-control">字体大小：</label>
+		<input type="text" name="width" ng-model="command.mask.fontSize">
+	</div>
+	<div class="form-group">
+		<label class="label-control">字体颜色：</label>
+		<input type="text" name="width" ng-model="command.mask.fontColor">
+	</div>
+	<div class="form-group">
+		<label class="label-control">透明度：</label>
+		<input type="text" name="width" ng-model="command.mask.alpha">%
+	</div>
+	<div class="form-group">
+		<label class="label-control">水印起始位置：</label>
+		<select ng-model="command.mask.pattern">
+			<option value="p11">顶部左侧</option>
+			<option value="p12">顶部居中</option>
+			<option value="p13">顶部右侧</option>
+			<option value="p21">中间左侧</option>
+			<option value="p22">中间居中</option>
+			<option value="p23">中间右侧</option>
+			<option value="p31">底部左侧</option>
+			<option value="p32">底部居中</option>
+			<option value="p33">底部右侧</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="label-control">X轴位置：</label>
+		<input type="text" name="width" ng-model="command.mask.x">.像素
+	</div>
+	<div class="form-group" >
+		<label class="label-control">Y轴位置：</label>
+		<input type="text" name="width" ng-model="command.mask.y">.像素
+	</div>
+</form>
