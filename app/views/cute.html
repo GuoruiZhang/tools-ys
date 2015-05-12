@@ -1,0 +1,33 @@
+<form class="form" role="form">
+	<div class="form-group">
+		<label class="label-control">宽度：</label>
+		<input type="text" name="width" ng-model="command.cute.width">.像素
+	</div>
+	<div class="form-group">
+		<label class="label-control">高度：</label>
+		<input type="text" name="width" ng-model="command.cute.height">.像素
+	</div>
+	<div class="form-group">
+		<label class="label-control">坐标点起始位置：</label>
+		<select name="cute-model" ng-model="command.cute.pattern">
+			<option value="p0">自定义模式</option>
+			<option value="p11">顶部左侧开始裁剪</option>
+			<option value="p12">顶部居中开始裁剪</option>
+			<option value="p13">顶部右侧开始裁剪</option>
+			<option value="p21">中部左侧开始裁剪</option>
+			<option value="p22">中部居中开始裁剪</option>
+			<option value="p23">中部居中开始裁剪</option>
+			<option value="p31">底部左侧开始裁剪</option>
+			<option value="p32">底部居中开始裁剪</option>
+			<option value="p33">底部右侧开始裁剪</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label class="label-control">X轴位置：</label>
+		<input type="text" name="width" ng-model="command.cute.x">.像素
+	</div>
+	<div class="form-group" >
+		<label class="label-control">Y轴位置：</label>
+		<input type="text" name="width" ng-model="command.cute.y">.像素
+	</div>
+</form>

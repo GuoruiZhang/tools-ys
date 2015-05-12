@@ -1,0 +1,12 @@
+{
+  "name": "top1clouddemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -p 80 ./app"
+  },
+  "author": "Mu Di",
+  "license": "MIT"
+}
