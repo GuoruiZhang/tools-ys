@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'controllers']);
+var app = angular.module('app', ['ui.router', 'controllers','directives']);
 
 app.run(function($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;

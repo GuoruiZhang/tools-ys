@@ -75,7 +75,7 @@ function maskHandle(value){
 		cmd.push('c~' + value.fontColor);
 	}
 	if(angular.isDefined(value.alpha)){
-		cmd.push('a~' + value.alpha);
+		cmd.push('a' + value.alpha);
 	}
 	if(angular.isDefined(value.pattern)){
 		if(angular.isDefined(value.x) && angular.isDefined(value.y)){
