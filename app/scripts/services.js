@@ -8,7 +8,6 @@ services.factory('commandCompiler',function(){
 	};
 	return {
 		compile:function(commandObj){
-			var chain = [];
 			var cmd = '';
 			angular.forEach(commandObj,function(value,key){
 				if(cmd!=''){
@@ -71,7 +70,7 @@ function maskHandle(value){
 	if(angular.isDefined(value.fontSize)){
 		cmd.push('s' + value.fontSize);
 	}
-	if(angular.isDefined(value.fontColor)){
+	if(angular.isDefined(value.fontColor) && value.fontColor != ''){
 		cmd.push('c~' + value.fontColor);
 	}
 	if(angular.isDefined(value.alpha)){
