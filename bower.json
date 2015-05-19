@@ -20,6 +20,6 @@
     "bootstrap": "~3.3.4",
     "angular-ui-router": "~0.2.13",
     "Justified-Gallery": "~3.5.4",
-    "eonasdan-bootstrap-datetimepicker": "~4.7.14"
+    "farbtastic": "~2.0.0-alpha.1"
   }
 }

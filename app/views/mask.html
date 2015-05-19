@@ -1,5 +1,9 @@
 <form class="form" role="form">
 	<div class="form-group">
+		<button class="btn btn-warning" ng-click="cleanIt('mask')">清除当前命令</button>
+		<button class="btn btn-danger" ng-click="cleanAll()">清楚所有命令</button>
+	</div>
+	<div class="form-group">
 		<label class="label-control">水印文字：</label>
 		<textarea cols="100" rows="3" ng-model="command.mask.text"></textarea>
 	</div>
@@ -22,7 +26,7 @@
 	</div>
 	<div class="form-group">
 		<label class="label-control">字体颜色：</label>
-		<input type="text" name="width" ng-model="command.mask.fontColor">
+		<input type="text" name="width" ng-model="command.mask.fontColor" colorPicker>
 	</div>
 	<div class="form-group">
 		<label class="label-control">透明度：</label>

@@ -1,5 +1,9 @@
 <form class="form" role="form">
 	<div class="form-group">
+		<button class="btn btn-warning" ng-click="cleanIt('cute')">清除当前命令</button>
+		<button class="btn btn-danger" ng-click="cleanAll()">清楚所有命令</button>
+	</div>
+	<div class="form-group">
 		<label class="label-control">宽度：</label>
 		<input type="text" name="width" ng-model="command.cute.width">.像素
 	</div>

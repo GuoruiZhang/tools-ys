@@ -76,4 +76,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('upload', {
+        url: '/upload',
+        views: {
+            '': {
+                templateUrl: 'views/apiHome.html'
+            },
+            'menu@upload': {
+                templateUrl: 'views/menu.html'
+            },
+            'content@upload': {
+                templateUrl: 'views/upload.html'
+            }
+        }
+    });
 });
