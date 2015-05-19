@@ -1,11 +1,14 @@
-var app = angular.module('app', ['ui.router', 'controllers','directives']);
+var app = angular.module('app', ['ui.router', 'controllers','directives','zeroclipboard']);
 
 app.run(function($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 });
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider,uiZeroclipConfigProvider) {
+    uiZeroclipConfigProvider.setZcConf({
+      swfPath: 'frameworks/zeroclipboard/dist/ZeroClipboard.swf'
+    });
     $urlRouterProvider.otherwise('/cute');
     $stateProvider
     .state('cute', {
