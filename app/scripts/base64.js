@@ -36,8 +36,9 @@
                 _keyStr.charAt(enc1) + _keyStr.charAt(enc2) +  
                 _keyStr.charAt(enc3) + _keyStr.charAt(enc4);  
             }  
-            output.replace('+','-');
-            output.replace('/','_');
+            output = output.replace(/[+\/]/g, function (m0) {
+                return m0 == '+' ? '-' : '_';
+            });
             return output;  
         }  
         
@@ -65,8 +66,6 @@
                 }  
             }  
             output = _utf8_decode(output);  
-            output.replace('-','+');
-            output.replace('_','/');
             return output;  
         }  
         

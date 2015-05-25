@@ -9,7 +9,7 @@
 	</div>
 	<div class="form-group">
 		<label class="label-control">图片水印：</label>
-		<input type="text" name="width" ng-model="command.mask.img" colorPick> (同一个容器中的相对URL)
+		<input type="text" name="width" ng-model="command.mask.img" colorPick> (同一个容器中的文件路径,比如：top1hub.png)
 	</div>
 	<div class="form-group">
 		<label class="label-control">字体：</label>
@@ -26,7 +26,8 @@
 	</div>
 	<div class="form-group">
 		<label class="label-control">字体颜色：</label>
-		<input type="text" name="width" ng-model="command.mask.fontColor" colorPicker>
+		<input type="text" name="width" ng-model="command.mask.fontColor" id="color" ng-init="command.mask.fontColor = ''">
+		<div id="colorPicker" colorpicker></div>
 	</div>
 	<div class="form-group">
 		<label class="label-control">透明度：</label>

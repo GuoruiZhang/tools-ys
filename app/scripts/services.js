@@ -8,7 +8,6 @@ services.factory('commandCompiler',function(){
 	};
 	return {
 		compile:function(commandObj){
-			var chain = [];
 			var cmd = '';
 			angular.forEach(commandObj,function(value,key){
 				if(cmd!=''){
@@ -71,11 +70,11 @@ function maskHandle(value){
 	if(angular.isDefined(value.fontSize)){
 		cmd.push('s' + value.fontSize);
 	}
-	if(angular.isDefined(value.fontColor)){
+	if(angular.isDefined(value.fontColor) && value.fontColor != ''){
 		cmd.push('c~' + value.fontColor);
 	}
 	if(angular.isDefined(value.alpha)){
-		cmd.push('a~' + value.alpha);
+		cmd.push('a' + value.alpha);
 	}
 	if(angular.isDefined(value.pattern)){
 		if(angular.isDefined(value.x) && angular.isDefined(value.y)){
