@@ -32,10 +32,10 @@ controllers.controller('command', function($scope,$http,commandCompiler) {
 	$scope.getToken = function(){
 		$http.get('http://api.top1cloud.com/getuploadtoken?SafeCode=' + $scope.upload.safeCode)
 		.success(function(data){
-			$scope.token = data.message;
+			$scope.upload.token = data.message;
 		})
 		.error(function(data){
-			alert(data);
+			alert("错误："+data);
 		});
 	}
 });

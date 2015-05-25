@@ -1,0 +1,44 @@
+<h2><u>Step 1.获取授权码</u></h2>
+<form class="form" role="from">
+	<div class="form-group">
+		<label class="label-control">安全码：</label>
+		<input type="text" ng-model="upload.safeCode">
+	</div>
+	<div class="form-group">
+		<label class="label-control">授权码：</label>
+		<input type="text" readonly="true" ng-bind="upload.token">
+	</div>
+	<div class="form-group">
+		<button class="btn btn-success" ng-click="getToken()">获取</button>
+	</div>
+</form>
+<h2><u>Step 2.获取上传文件哈希值</u></h2>
+<form class="form" role="form">
+	<div class="form-group">		
+		<label class="label-control">上传：</label>
+		<input type="file">
+	</div>
+	<div class="form-group">
+		<label class="label-control">哈希值(sha1算法)：</label>
+		<input type="text">
+		<a href="demoTool.zip">点击下载《生成Hash值工具》</a>
+	</div>
+</form>
+<h2><u>Step 3.输入文件属性上传文件</u></h2>
+<form class="form" role="form">
+	<div class="form-group">		
+		<label class="label-control">空间名称：</label>
+		<input type="text">
+	</div>
+	<div class="form-group">
+		<label class="label-control">文件名：</label>
+		<input type="text">
+	</div>
+	<div class="form-group">
+		<label class="label-control">是否覆盖：</label>
+		<input type="checkbox">
+	</div>
+	<div class="form-group">
+		<button class="btn btn-success">上传</button>
+	</div>
+</form>

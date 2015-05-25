@@ -76,17 +76,31 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         }
     })
-    .state('upload', {
-        url: '/upload',
+    .state('apiDemo', {
+        url: '/apiDemo',
         views: {
             '': {
                 templateUrl: 'views/apiHome.html'
             },
-            'menu@upload': {
+            'menu@apiDemo': {
                 templateUrl: 'views/menu.html'
             },
-            'content@upload': {
-                templateUrl: 'views/upload.html'
+            'content@apiDemo': {
+                templateUrl: 'views/apiDemo.html'
+            }
+        }
+    })
+    .state('tools', {
+        url: '/tools',
+        views: {
+            '': {
+                templateUrl: 'views/apiHome.html'
+            },
+            'menu@tools': {
+                templateUrl: 'views/menu.html'
+            },
+            'content@tools': {
+                templateUrl: 'views/tools.html'
             }
         }
     });
