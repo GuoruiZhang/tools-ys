@@ -1,3 +1,4 @@
+<h1><u>上传文件</u></h1>
 <h2><u>Step 1.获取授权码</u></h2>
 <form class="form" role="from">
 	<div class="form-group">
@@ -6,7 +7,7 @@
 	</div>
 	<div class="form-group">
 		<label class="label-control">授权码：</label>
-		<input type="text" readonly="true" ng-bind="upload.token">
+		<input type="text" readonly="true" ng-model="upload.token">
 	</div>
 	<div class="form-group">
 		<button class="btn btn-success" ng-click="getToken()">获取</button>
@@ -14,31 +15,40 @@
 </form>
 <h2><u>Step 2.获取上传文件哈希值</u></h2>
 <form class="form" role="form">
-	<div class="form-group">		
-		<label class="label-control">上传：</label>
-		<input type="file">
-	</div>
 	<div class="form-group">
 		<label class="label-control">哈希值(sha1算法)：</label>
-		<input type="text">
+		<input type="text" ng-model="upload.dataHash">
 		<a href="demoTool.zip">点击下载《生成Hash值工具》</a>
 	</div>
 </form>
 <h2><u>Step 3.输入文件属性上传文件</u></h2>
-<form class="form" role="form">
+<form class="form" role="form" method="post" action="http://upload.top1cloud.com/upload" enctype="multipart/form-data">
+	<div class="form-group">
+		<label class="label-control">授权码：</label>
+		<input type="text" name="token" readonly="true" ng-model="upload.token">
+	</div>
+	<div class="form-group">
+		<label class="label-control">哈希值(sha1算法)：</label>
+		<input type="text" name="dataHash" readonly="true" ng-model="upload.dataHash">
+	</div>
+	<div class="form-group">		
+		<label class="label-control">文件：</label>
+		<input type="file" name="file">
+	</div>
 	<div class="form-group">		
 		<label class="label-control">空间名称：</label>
-		<input type="text">
+		<input type="text" name="container">
 	</div>
 	<div class="form-group">
 		<label class="label-control">文件名：</label>
-		<input type="text">
+		<input type="text" name="fileKey">
 	</div>
 	<div class="form-group">
 		<label class="label-control">是否覆盖：</label>
-		<input type="checkbox">
+		<input type="checkbox" name="isCover" value="false">
 	</div>
+
 	<div class="form-group">
-		<button class="btn btn-success">上传</button>
+		<button class="btn btn-success" type="submit">上传</button>
 	</div>
 </form>

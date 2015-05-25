@@ -30,12 +30,13 @@ controllers.controller('command', function($scope,$http,commandCompiler) {
 
 	$scope.upload = {};
 	$scope.getToken = function(){
-		$http.get('http://api.top1cloud.com/getuploadtoken?SafeCode=' + $scope.upload.safeCode)
-		.success(function(data){
+		$http.jsonp('http://api.top1cloud.com/getuploadtoken?SafeCode=' + $scope.upload.safeCode + '&callback=JSON_CALLBACK')
+		.success(function(data,status){
 			$scope.upload.token = data.message;
 		})
 		.error(function(data){
 			alert("错误："+data);
 		});
-	}
+	};
+
 });
