@@ -1,0 +1,36 @@
+<h3>源速:配合我的上传工具<i>yssync</i> 使您的工作事半功倍!</h3>
+<h3 class="text-success"><u>安装yssync</u></h3>
+<p>yssync是一个命令行工具，使用npm安装</p>
+<pre><code>npm install yssync -g</code></pre>
+<p>yssync需要先安装<a href="http://nodejs.org">node and npm</a></p>
+<h3>源速:让我们来使用yssync命令吧!</h3>
+<p>首先请打开命令行窗口</p>
+<h3 class="text-success"><u>初始化目录</u></h3>
+<pre><code>cd workdirectory   </code></pre>
+<pre><code>yssync init -s &lt;safecode&gt; -n &lt;spacename&gt;</code></pre>
+<p>yssync 在当前目录下生成 .yssync 配置文件,您可以直接修改文件里面的参数</p>
+
+<h3 class="text-success"><u>上传所有文件</u></h3>
+<pre><code>yssync upload</code></pre>
+
+<h3 class="text-success"><u>了解yssync更多功能</u></h3>
+<pre><code>yssync -h</code></pre>
+<pre><code>
+	Usage: yssync [options] [command]
+	Commands:
+
+	init     初始化当前路径为源速同步目录
+	upload   上传当前目录文件到源速
+
+	Options:
+
+	-h, --help                 output usage information
+	-V, --version              output the version number
+	-s --safecode <string>     设置API安全码
+	-n --namespace <string>    设置空间名称
+	-p --prefixPath <string>   设置前缀路径
+	-i --isCover <boolean>     是否覆盖同名文件
+	-w --workerLimit <number>  并行上传文件数量
+</code></pre>
+
+
